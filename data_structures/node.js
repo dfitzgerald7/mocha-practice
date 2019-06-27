@@ -7,3 +7,7 @@ class Node {
         this.right = null; 
     }
 }
+
+module.export = {
+    Node
+}
