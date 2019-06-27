@@ -1,3 +1,8 @@
-module.exports = function(){
-    return "Hello world";
+const sayHello = () => {
+    return 'Hello world';
+}
+
+
+module.exports = {
+    sayHello
 }
