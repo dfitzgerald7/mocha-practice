@@ -8,8 +8,21 @@ describe("Node", function(){
     it ('The test works', function(){
         assert.equal(1,1)
     })
-    it ('A new can be instantiated', function(){
+    it ('A node can be instantiated', function(){
         let myNode = new nodeClass(1);
         assert.equal(myNode.id, 1)
+        assert.equal(myNode.numDuplicated, 0)
+    })
+})
+
+describe("BinaryTree", function(){
+    before(function(){
+        let head = new nodeClass(50)
+        let tree = new binaryTreeClass(head)
+        
+    })
+    
+    it ('A tree can be instantiated', function(){
+        assert.equal(tree.head, head)
     })
 })

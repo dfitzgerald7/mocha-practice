@@ -30,6 +30,4 @@ class BinaryTree {
 
 }
 
-module.export = {
-    BinaryTree
-}
+module.exports = BinaryTree
