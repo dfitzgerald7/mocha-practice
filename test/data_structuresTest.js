@@ -16,13 +16,17 @@ describe("Node", function(){
 })
 
 describe("BinaryTree", function(){
-    before(function(){
-        let head = new nodeClass(50)
-        let tree = new binaryTreeClass(head)
-        
-    })
+
+    let head = new nodeClass(50)
+    let tree = new binaryTreeClass(head)
     
-    it ('A tree can be instantiated', function(){
+    it('A tree can be instantiated', function(){
         assert.equal(tree.head, head)
     })
+
+    it('A node can be added', function(){
+        assert.equal()
+    })
+
+
 })
