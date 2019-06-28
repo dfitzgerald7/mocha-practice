@@ -25,7 +25,12 @@ describe("BinaryTree", function(){
     })
 
     it('A node can be added', function(){
-        assert.equal()
+        let node70 = new nodeClass(70)
+        let node30 = new nodeClass(30)
+        tree.addNode(node70)
+        tree.addNode(node30)
+        assert.equal(head.right, node70)
+        assert.equal(head.left, node30)
     })
 
 

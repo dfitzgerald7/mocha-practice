@@ -7,21 +7,21 @@ class BinaryTree {
     addNode(newNode){
         let node = this.head;
         while(node){
-            if (newNode > node){
+            if (newNode.id > node.id){
                 if (node.right){
                     node = node.right;
                 } else {
                     node.right = newNode;
                     return 
                 }
-            } else if(newNode < node){
+            } else if(newNode.id < node.id){
                 if (node.left){
                     node = node.left;
                 } else {
                     node.left = newNode; 
                     return 
                 }
-                } else {
+            } else {
                 node.numDuplicates++;
                 return; 
             }
