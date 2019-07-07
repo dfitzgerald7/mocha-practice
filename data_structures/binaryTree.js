@@ -29,8 +29,14 @@ class BinaryTree {
     }
 
     preorder(node){
+        const treeArr = []
+        preorderHelper(node)
+        return treeArr
+    }
+
+    preorderhelper(node){
         if (node !== null){
-            console.log(node.id)
+            treeArr.push(node.id)
             this.preorder(node.left) 
             this.preorder(node.right) 
         }

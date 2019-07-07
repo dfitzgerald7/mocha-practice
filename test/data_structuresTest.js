@@ -31,5 +31,15 @@ describe("BinaryTree", function(){
         assert.equal(head.left, node30)
     })
 
+    it('A tree can be traversed in preorder', function(){
+        let node70 = new nodeClass(70)
+        let node30 = new nodeClass(30)
+        let node10 = new nodeClass(10)
+        tree.addNode(node70)
+        tree.addNode(node30)
+        tree.addNode(node10)
+        assert.equal(tree.preorder, [10, 30, 50, 70])
+    })
+
 
 })
