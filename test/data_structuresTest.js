@@ -1,4 +1,5 @@
 const assert = require('chai').assert;
+const expect = require('chai').expect;
 const nodeClass = require('../data_structures/node.js')
 const binaryTreeClass = require('../data_structures/binaryTree')
 
@@ -38,7 +39,7 @@ describe("BinaryTree", function(){
         tree.addNode(node70)
         tree.addNode(node30)
         tree.addNode(node10)
-        assert.equal(tree.preorder, [10, 30, 50, 70])
+        expect(tree.preorder(head)).to.eql([10,30,50,70]) 
     })
 
 

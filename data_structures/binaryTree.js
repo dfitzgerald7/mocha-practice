@@ -28,18 +28,18 @@ class BinaryTree {
         }
     }
 
+
     preorder(node){
+        function preorderHelper(node){
+            if (node){
+                preorderHelper(node.left) 
+                treeArr.push(node.id)
+                preorderHelper(node.right) 
+            }
+        }
         const treeArr = []
         preorderHelper(node)
         return treeArr
-    }
-
-    preorderhelper(node){
-        if (node !== null){
-            treeArr.push(node.id)
-            this.preorder(node.left) 
-            this.preorder(node.right) 
-        }
     }
 
 }
