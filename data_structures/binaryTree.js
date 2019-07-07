@@ -43,23 +43,26 @@ class BinaryTree {
     }
 
     search(nodeId, node){
-        if (nodeId === node.id){
-            return node;
-        } else if (nodeId > node.id){
-            if (node.right){
-                this.search(nodeId, node.right)
+        if (node){
+            if (nodeId === node.id){
+                return node.id;
+            } else if (nodeId > node.id){
+                if (node.right){
+                    return this.search(nodeId, node.right)
+                } else {
+                    return "Id is not in tree."
+                }
             } else {
-                return "Id is not in tree."
+                if (node.left){
+                    return this.search(nodeId, node.left)
+                } else {
+                    return "Id is not in tree."
+                }
             }
         } else {
-            if (node.left){
-                this.search(nodeId, node.left)
-            } else {
-                return "Id is not in tree."
-            }
+            return 'Id is not in tree.'
         }
     }
-
 }
 
 module.exports = BinaryTree
