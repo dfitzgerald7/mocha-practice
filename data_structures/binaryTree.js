@@ -29,16 +29,16 @@ class BinaryTree {
     }
 
 
-    preorder(node){
-        function preorderHelper(node){
+    inorder(node){
+        function inorderHelper(node){
             if (node){
-                preorderHelper(node.left) 
+                inorderHelper(node.left) 
                 treeArr.push(node.id)
-                preorderHelper(node.right) 
+                inorderHelper(node.right) 
             }
         }
         const treeArr = []
-        preorderHelper(node)
+        inorderHelper(node)
         return treeArr
     }
 

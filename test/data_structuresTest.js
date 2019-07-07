@@ -33,11 +33,11 @@ describe("BinaryTree", function(){
         assert.equal(head.left, node30)
     })
 
-    it('A tree can be traversed in preorder', function(){
+    it('A tree can be traversed inorder', function(){
         tree.addNode(node70)
         tree.addNode(node30)
         tree.addNode(node10)
-        expect(tree.preorder(head)).to.eql([10,30,50,70]) 
+        expect(tree.inorder(head)).to.eql([10,30,50,70]) 
     })
 
     it('A tree can be searched', function(){
