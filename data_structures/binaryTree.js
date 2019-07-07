@@ -28,6 +28,14 @@ class BinaryTree {
         }
     }
 
+    preorder(node){
+        if (node !== null){
+            console.log(node.id)
+            this.preorder(node.left) 
+            this.preorder(node.right) 
+        }
+    }
+
 }
 
 module.exports = BinaryTree
