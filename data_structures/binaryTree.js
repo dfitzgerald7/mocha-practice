@@ -42,6 +42,24 @@ class BinaryTree {
         return treeArr
     }
 
+    search(nodeId, node){
+        if (nodeId === node.id){
+            return node;
+        } else if (nodeId > node.id){
+            if (node.right){
+                this.search(nodeId, node.right)
+            } else {
+                return "Id is not in tree."
+            }
+        } else {
+            if (node.left){
+                this.search(nodeId, node.left)
+            } else {
+                return "Id is not in tree."
+            }
+        }
+    }
+
 }
 
 module.exports = BinaryTree
