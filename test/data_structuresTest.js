@@ -41,6 +41,7 @@ describe("BinaryTree", function(){
     })
 
     it('A tree can be searched', function(){
+        
         tree.addNode(node70)
         tree.addNode(node30)
         tree.addNode(node10)
